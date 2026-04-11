@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from privacycheck import get_page, check_trackers, check_headers, check_fingerprinting, check_cookies, calculate_risk
 from bs4 import BeautifulSoup
+import os
 
 app = Flask(__name__)
 
