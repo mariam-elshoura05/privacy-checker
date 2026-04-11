@@ -1,4 +1,4 @@
-# Privacy Checker 🔍 
+# Glasshouse 🔍 
 A static privacy and security analysis tool for websites. Paste a URL, get a report.
 ## Why I Built This
 Targeted advertising has always been suspicious. But something shifted when major platforms started introducing “child safety” features that (conveniently) also gave them a cleaner excuse to be less subtle about their tracking infrastructure. The surveillance never stop, it just got rebranded.
@@ -13,17 +13,17 @@ This is that tool.
 ## Findings Worth Mentioning
 Notably, a large volunteer-run nonprofit platform scored Low Risk with no findings, while several major corporate sites got flagged with Medium or even High Risk, which suggests that privacy hygiene often correlates more with organizational values than resources.
 ## Installation
+You can access the live version at https://glasshouse-tool.onrender.com/, or if you'd prefer to locally run it:
 ```bash
-git clone https://github.com/mariam-elshoura05/privacy-checker
-cd privacy-checker
+git clone https://github.com/mariam-elshoura05/Glasshouse
+cd Glasshouse
 pip3 install -r requirements.txt --break-system-packages
 python3 app.py
 ```
-Then open http://127.0.0.1:5000 in your browser.
 ## Limitations
 - This tool only does static analysis, so dynamically loaded scripts via JavaScript are not detected
 - Tracker database is manually maintained and not exhaustive
-- Cookie analysis only covers cookies set on inisial page load
+- Cookie analysis only covers cookies set on initial page load
 ## Planned
 - Browser extension (v2)
 - Expanded tracker database
