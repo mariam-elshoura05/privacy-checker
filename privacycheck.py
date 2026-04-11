@@ -9,8 +9,7 @@ def get_page(url):
         response = requests.get(url, headers=headers, timeout=10)
         return response
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching page: {e}")
-        sys.exit(1)
+        raise Exception(f"Error fetching page: {e}")
 
 TRACKERS = {
     "Google Analytics": ["google-analytics.com", "googletagmanager.com", "gtag/js"],
@@ -20,6 +19,20 @@ TRACKERS = {
     "LinkedIn": ["snap.licdn.com", "linkedin.com/px"],
     "Hotjar": ["static.hotjar.com"],
     "Mixpanel": ["cdn.mxpnl.com", "mixpanel.com"],
+    "Amazon ads": ["amazon-adsystem.com", "amazon-adsystem.com/ads"],
+    "criteo": ["criteo.com", "criteo.net"],
+    "Taboola": ["taboola.com", "trc.taboola.com"],
+    "Outbrain": ["outbrain.com", "widgets.outbrain.com"],
+    "Clarity": ["clarity.ms", "clarity.microsoft.com"],
+    "Segment": ["segment.com", "cdn.segment.com"],
+    "Amplitude": ["amplitude.com", "cdn.amplitude.com"],
+    "HubSpot": ["hubspot.com", "js.hs-scripts.com"],
+    "FullStory": ["fullstory.com", "fullstory.com/s/fs.js"],
+    "Luckyorange": ["luckyorange.com", "luckyorange.com/w.js"],
+    "Mouseflow": ["mouseflow.com", "cdn.mouseflow.com/projects"],
+    "Smartlook": ["smartlook.com", "web-sdk.smartlook.com/recorder.js"],
+    "Intercom": ["intercom.com", "widget.intercom.io"],
+    "Drift": ["drift.com", "js.driftt.com"],
 }
 
 def check_trackers(soup, response_text):
